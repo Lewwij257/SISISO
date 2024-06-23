@@ -1,7 +1,9 @@
 package com.example.sisiso
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +23,7 @@ class SolutionActivity : AppCompatActivity() {
             insets
         }
 
+        val btnRestart = findViewById<Button>(R.id.button_restart)
         val tvSpecial = findViewById<TextView>(R.id.text_special)
 
         try{
@@ -36,8 +39,11 @@ class SolutionActivity : AppCompatActivity() {
         catch (e: Exception){
             tvSpecial.visibility = View.VISIBLE
         }
+
+        btnRestart.setOnClickListener {
+            intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
-
-
-
 }

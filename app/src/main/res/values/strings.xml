@@ -45,4 +45,6 @@
     <string name="previous_step">previous step</string>
     <string name="next_step">next step</string>
     <string name="calculate">calculate</string>
+    <string name="x">X =</string>
+    <string name="f_is">F =</string>
 </resources>
