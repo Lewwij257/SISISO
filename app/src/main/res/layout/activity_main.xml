@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ghost_white"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/edit_variables_count"
+                    android:layout_width="100dp"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:layout_gravity="center_horizontal"
+                    android:autofillHints="number"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/variables"/>
+
+                <EditText
+                    android:id="@+id/edit_equations_count"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:gravity="center_horizontal|bottom"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints="number"
+                    android:hint="@string/constraints"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_build_matrix"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/build"
+                    android:background="@color/periwinkle"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/text_build_matrix_error_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible"
+                    android:textSize="15sp"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_restart_activity"
+                    android:layout_width="100dp"
+                    android:visibility="gone"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/restart"
+                    android:background="@color/periwinkle"
+                    android:textSize="13sp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_solve_settings"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/settings"
+                    android:background="@color/periwinkle"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_f"
+                    android:visibility="invisible"
+                    android:layout_width="25dp"
+                    android:layout_height="40dp"
+                    android:text="@string/f"
+                    android:textSize="20sp"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_marginTop="55dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <GridView
+                    android:id="@+id/grid_x_order_horizontal"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:clickable="false" />
+
+                <GridView
+                    android:id="@+id/grid_origin_function"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <GridView
+                    android:id="@+id/grid_equations_system"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="10dp" />
+
+                <GridView
+                    android:id="@+id/grid_graphic_equations_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:background="@color/tropical_indigo"
+                android:layout_marginStart="10dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_info"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:textSize="18sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_info"
+                    android:contentDescription="@string/instruction"
+                    android:layout_gravity="center_horizontal"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_accept_matrices_inputs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/btn_check"
+                    android:contentDescription="@string/start_gaussian_transformation"
+                    android:fontFamily="monospace"
+                    android:textSize="50sp"
+                    android:gravity="center_horizontal"/>
+
+                <View
+                    android:id="@+id/button_start"
+                    android:visibility="gone"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/start_solving"
+                    android:background="@drawable/btn_next"
+                    android:fontFamily="monospace"
+                    android:textSize="50sp"
+                    android:gravity="center_horizontal"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_app_settings"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="@string/settings"
+                    android:background="@drawable/btn_settings"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

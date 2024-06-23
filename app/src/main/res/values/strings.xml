@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">SISISO</string>
+    <string name="variables">variables</string>
+    <string name="constraints">constraints</string>
+    <string name="build">build</string>
+    <string name="settings">settings</string>
+    <string name="f">F=</string>
+    <string name="instruction">instruction</string>
+    <string name="start_solving">start solving</string>
+    <string name="start_gaussian_transformation">start gaussian transformation</string>
+    <string name="incorrect_input">Incorrect input!</string>
+
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string-array name="choose_method_spinner">
+        <item>Default simplex</item>
+        <item>Artificial basis</item>
+        <item>Graphic method</item>
+    </string-array>
+
+    <string name="solution_is">Solution is:</string>
+    <string name="solving_settings">Solving settings</string>
+    <string name="step_by_step_solve">step by step solve</string>
+    <string name="ordinary_fractions">ordinary fractions</string>
+    <string name="save">save</string>
+    <string name="choose_support_element">Choose support element</string>
+    <string name="simplex_table_is_solved_click_next_to_see_solve">Simplex table is solved! click next to see solve</string>
+    <string name="simplex_table_is_now_unsolvable_click_next_to_restart">Simplex table is now unsolvable, click next to restart</string>
+    <string name="please_select_support_item_before_simplex_step">Please, select support item before simplex step</string>
+    <string name="x_y_coordinates">x, y coordinates:</string>
+    <string name="minimal_function_value">minimal function value:</string>
+    <string name="warning_unsolvable_problem">Warning, unsolvable problem!</string>
+    <string name="please_press_restart_button_or_restart_the_app">Please, press restart button or restart the app.</string>
+    <string name="main_instruction_text_1">step 1: enter the variables and constraints amount.</string>
+    <string name="main_instruction_text_2">step 2: click the settings button and configure solution method.</string>
+    <string name="main_instruction_text_3">step 3: enter the original function and equations into the matrices on the screen.</string>
+    <string name="main_instruction_text_4">step 4: click the check button to confirm matrix, click it again to start magic.</string>
+    <string name="cancel">Cancel</string>
+    <string name="restart">restart</string>
+    <string name="load_previous_matrix">load previous matrix</string>
+    <string name="saved">Saved!</string>
+    <string name="previous_step">previous step</string>
+    <string name="next_step">next step</string>
+    <string name="calculate">calculate</string>
+</resources>

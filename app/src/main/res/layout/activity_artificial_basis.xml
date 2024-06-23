@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArtificialBasisActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent">
+            <GridView
+                android:id="@+id/grid_x_order_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_width="50dp"
+                android:layout_height="240dp">
+            </GridView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="550dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/grid_x_order_horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp">
+            </GridView>
+
+            <GridView
+                android:id="@+id/grid_equations_system"
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+            </GridView>
+
+            <TextView
+                android:id="@+id/text_instruction"
+                android:text="@string/choose_support_element"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_restart_solve"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_reload">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </Space>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_calculate"
+                android:layout_width="70dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/btn_continue"
+                android:layout_height="70dp">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </Space>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal"
+                android:layout_marginEnd="5dp"
+                android:layout_height="70dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_previous_step"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_previous_grey"
+                    android:layout_gravity="center_vertical">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </Space>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_next_step"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/btn_next_grey"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical">
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
